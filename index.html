@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Preview Card</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Preview Card · Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <main class="card">
-    <img src="images/desktop-design.jpg" alt="design image" class="card-img">
+<body class="min-h-screen bg-slate-100 antialiased">
+  <main class="container mx-auto p-6">
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+      <article class="w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img
+          src="images/desktop-design.jpg" alt="Preview of the blog card"
+          class="w-full h-48 object-cover"
+        />
 
-    <div class="card-content">
-      <span class="tag">Learning</span>
-      <p class="date">Published 21 Dec 2023</p>
+        <div class="p-5">
+          <div class="mb-3 flex items-center gap-3">
+            <span class="inline-block bg-yellow-300 text-black text-[11px] font-extrabold px-3 py-1 rounded-lg uppercase">
+              Learning
+            </span>
+            <time datetime="2023-12-21" class="text-xs text-gray-500">Published 21 Dec 2023</time>
+          </div>
 
-      <h1 class="title">HTML & CSS foundations</h1>
-      <p class="description">
-        These languages are the backbone of every website, defining structure, content, and presentation.
-      </p>
+          <h1 class="text-xl font-extrabold text-gray-900 mb-2">
+            HTML &amp; CSS foundations
+          </h1>
 
-      <div class="author">
-        <img src="images/preview.jpg" alt="Greg Hooper" class="author-img">
-        <p class="author-name">Greg Hooper</p>
-      </div>
-    </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            These languages are the backbone of every website, defining structure, content, and presentation.
+          </p>
+
+          <div class="mt-4 flex items-center gap-3 border-t border-gray-200 pt-4">
+            <img
+              src="images/preview.jpg" alt="Portrait of Greg Hooper"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <p class="text-sm font-semibold text-gray-900">Greg Hooper</p>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 </body>
 </html>
